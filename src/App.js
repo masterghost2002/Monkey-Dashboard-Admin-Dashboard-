@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Topbar from "./components/topbar/Topbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./pages/home";
@@ -6,6 +7,7 @@ import User from "./pages/User";
 import NewUser from "./pages/NewUser";
 import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
+import DesktopModeWarning from "./components/warning/DesktopModeWarning";
 import styled from "styled-components";
 import { AnimatePresence } from "framer-motion"
 import {
@@ -17,11 +19,20 @@ const Container = styled.div`
   display:flex;
 `
 function App() {
+  const [isDesktop, setIsDesktop] = useState(false);
+  console.log(isDesktop);
+  useEffect(()=>{
+    if(window.innerWidth<=800)
+      setIsDesktop(false);
+    else setIsDesktop(true);
+  }, [])
   const location = useLocation();
   return (
     <>
-      <Topbar />
-      <Container>
+    {
+      isDesktop?<>
+         <Topbar />
+        <Container>
         <Sidebar />
         <AnimatePresence mode="wait">
           <Routes key={location.pathname} location={location}>
@@ -34,6 +45,9 @@ function App() {
           </Routes>
         </AnimatePresence>
       </Container>
+      </>
+      :<DesktopModeWarning/>
+    }
     </>
   );
 }
