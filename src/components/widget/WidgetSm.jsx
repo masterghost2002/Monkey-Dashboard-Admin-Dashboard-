@@ -11,11 +11,18 @@ const Container = styled.div`
     &:hover{
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
+    overflow:auto;
+    widht:100%;
+    position:realtive;
 `
 const Title = styled.h2`
     padding:0px;
     font-weight: 600;
     margin-bottom:20px;
+    position:sticky;
+    top:0px;
+    z-index:10;
+    background-color:white;
 `
 const List = styled.ul` 
     list-style:none;
@@ -65,7 +72,7 @@ const Button = styled.button`
 export default function WidgetSm() {
     return (
         <Container>
-            <Title>New Join Members</Title>
+            <Title>New Users</Title>
             <List>
                 {newUserData.map((item, index) =>
                     <ListItem key={index}>
