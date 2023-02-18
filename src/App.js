@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Topbar from "./components/topbar/Topbar";
+import Sidebar from "./components/sidebar/Sidebar";
+import Home from "./pages/home";
+import UserList from "./pages/UserList";
+import User from "./pages/User";
+import NewUser from "./pages/NewUser";
+import ProductList from "./pages/ProductList";
+import Product from "./pages/Product";
+import styled from "styled-components";
+import { AnimatePresence } from "framer-motion"
+import {
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+const Container = styled.div`
+  display:flex;
+`
 function App() {
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Topbar />
+      <Container>
+        <Sidebar />
+        <AnimatePresence mode="wait">
+          <Routes key={location.pathname} location={location}>
+            <Route path="/" element={<Home />} />
+            <Route path="/users" element={<UserList />} />
+            <Route path="/user/newuser" element={<NewUser/>}/>
+            <Route path="/user/:id" element={<User/>}/>
+            <Route path="/products" element={<ProductList/>}/>
+            <Route path="/product/:id" element={<Product/>}/>
+          </Routes>
+        </AnimatePresence>
+      </Container>
+    </>
   );
 }
 
