@@ -160,6 +160,78 @@ export const latestTransactions = [
         currencySign: '\u20B9',
         status: "Approved"
     },
+    {
+        name:'Tyrese Gibson',
+        avatarImg:"https://upload.wikimedia.org/wikipedia/commons/2/2d/TyreseGibsonDec08.jpg",
+        date:"27 April 2022",
+        price:Math.round(Math.random()*4000+1000),
+        currencySign: '\u20B9',
+        status: "Approved"
+    },  {
+        name:'Tyrese Gibson',
+        avatarImg:"https://upload.wikimedia.org/wikipedia/commons/2/2d/TyreseGibsonDec08.jpg",
+        date:"27 April 2022",
+        price:Math.round(Math.random()*4000+1000),
+        currencySign: '\u20B9',
+        status: "Approved"
+    },  {
+        name:'Tyrese Gibson',
+        avatarImg:"https://upload.wikimedia.org/wikipedia/commons/2/2d/TyreseGibsonDec08.jpg",
+        date:"27 April 2022",
+        price:Math.round(Math.random()*4000+1000),
+        currencySign: '\u20B9',
+        status: "Approved"
+    },  {
+        name:'Tyrese Gibson',
+        avatarImg:"https://upload.wikimedia.org/wikipedia/commons/2/2d/TyreseGibsonDec08.jpg",
+        date:"27 April 2022",
+        price:Math.round(Math.random()*4000+1000),
+        currencySign: '\u20B9',
+        status: "Approved"
+    },  {
+        name:'Tyrese Gibson',
+        avatarImg:"https://upload.wikimedia.org/wikipedia/commons/2/2d/TyreseGibsonDec08.jpg",
+        date:"27 April 2022",
+        price:Math.round(Math.random()*4000+1000),
+        currencySign: '\u20B9',
+        status: "Approved"
+    },
+    {
+        name:'Tyrese Gibson',
+        avatarImg:"https://upload.wikimedia.org/wikipedia/commons/2/2d/TyreseGibsonDec08.jpg",
+        date:"27 April 2022",
+        price:Math.round(Math.random()*4000+1000),
+        currencySign: '\u20B9',
+        status: "Approved"
+    },  {
+        name:'Tyrese Gibson',
+        avatarImg:"https://upload.wikimedia.org/wikipedia/commons/2/2d/TyreseGibsonDec08.jpg",
+        date:"27 April 2022",
+        price:Math.round(Math.random()*4000+1000),
+        currencySign: '\u20B9',
+        status: "Approved"
+    },  {
+        name:'Tyrese Gibson',
+        avatarImg:"https://upload.wikimedia.org/wikipedia/commons/2/2d/TyreseGibsonDec08.jpg",
+        date:"27 April 2022",
+        price:Math.round(Math.random()*4000+1000),
+        currencySign: '\u20B9',
+        status: "Approved"
+    },  {
+        name:'Tyrese Gibson',
+        avatarImg:"https://upload.wikimedia.org/wikipedia/commons/2/2d/TyreseGibsonDec08.jpg",
+        date:"27 April 2022",
+        price:Math.round(Math.random()*4000+1000),
+        currencySign: '\u20B9',
+        status: "Approved"
+    },  {
+        name:'Tyrese Gibson',
+        avatarImg:"https://upload.wikimedia.org/wikipedia/commons/2/2d/TyreseGibsonDec08.jpg",
+        date:"27 April 2022",
+        price:Math.round(Math.random()*4000+1000),
+        currencySign: '\u20B9',
+        status: "Approved"
+    },
 ]
 
 
@@ -256,7 +328,8 @@ export const userListRow = [
         email:'paulwalker@mail.com',
         status:'active',
         transaction:12332
-    },
+    }
+    
   ];
 
     

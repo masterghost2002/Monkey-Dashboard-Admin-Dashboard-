@@ -7,6 +7,7 @@ import User from "./pages/User";
 import NewUser from "./pages/NewUser";
 import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
+import Transactions from "./pages/Transactions";
 import DesktopModeWarning from "./components/warning/DesktopModeWarning";
 import styled from "styled-components";
 import { AnimatePresence } from "framer-motion"
@@ -20,7 +21,6 @@ const Container = styled.div`
 `
 function App() {
   const [isDesktop, setIsDesktop] = useState(false);
-  console.log(isDesktop);
   useEffect(()=>{
     if(window.innerWidth<=800)
       setIsDesktop(false);
@@ -42,6 +42,7 @@ function App() {
             <Route path="/user/:id" element={<User/>}/>
             <Route path="/products" element={<ProductList/>}/>
             <Route path="/product/:id" element={<Product/>}/>
+            <Route path="/transactions" element={<Transactions/>}/>
           </Routes>
         </AnimatePresence>
       </Container>

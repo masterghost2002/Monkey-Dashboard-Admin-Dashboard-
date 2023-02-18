@@ -65,10 +65,10 @@ const Button = styled.button`
   cursor: pointer;
   font-weight:500;
 `
-export default function WidgetLg() {
+export default function WidgetLg(props) {
   return (
     <Container>
-      <Title>Latest Transactions</Title>
+      <Title>{props.title}</Title>
       <Table>
         <thead style={{position:'sticky', top:'0px'}}>
         <Row position="sticky">
@@ -80,6 +80,7 @@ export default function WidgetLg() {
         </thead>
         <tbody>
         {latestTransactions.map((item, index) =>
+          (props.limit === undefined || index<props.limit) && 
           <Row key={index}>
             <TableData flex="2">
               <AvatarImage src={item.avatarImg} />

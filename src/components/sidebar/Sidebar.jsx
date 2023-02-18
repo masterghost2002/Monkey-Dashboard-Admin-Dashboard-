@@ -6,11 +6,11 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
 import CurrencyRupeeOutlinedIcon from '@mui/icons-material/CurrencyRupeeOutlined';
-import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import MailOutlineOutlinedIcon from '@mui/icons-material/MailOutlineOutlined';
 import DynamicFeedOutlinedIcon from '@mui/icons-material/DynamicFeedOutlined';
 import ReportIcon from '@mui/icons-material/Report';
 import WorkOutlinedIcon from '@mui/icons-material/WorkOutlined';import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
+import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
 const SidebarContainer = styled.div`
     flex:1;
     max-height: 100vh;
@@ -51,10 +51,12 @@ const ListItem = styled.li`
     }
 `
 const StyledLink = styled(Link)`
+    width:100%;
     text-decoration: none;
     color:${props=>props.isActive === 'isActive'?'#007fff':'inherit'};
     display:flex;
     align-items:center;
+
 
 `
 export default function Sidebar() {
@@ -101,18 +103,34 @@ export default function Sidebar() {
                             Products
                             </StyledLink>
                         </ListItem>
-                        <ListItem>
+                        <ListItem >
+                            <StyledLink to='/transactions'>
                             <CurrencyRupeeOutlinedIcon/>
                             Transactions
-                        </ListItem>
-                        <ListItem>
-                            <AssessmentOutlinedIcon/>
-                            Reports
+                            </StyledLink>
                         </ListItem>
                     </List>
                 </SidebarMenu>
 
-
+                <SidebarMenu>
+                    <Title>
+                        Action
+                    </Title>
+                    <List>
+                        <ListItem>
+                            <StyledLink to="/user/newuser">
+                            <PersonAddAltOutlinedIcon/>
+                               Add User
+                            </StyledLink>
+                        </ListItem>
+                        <ListItem>
+                            <StyledLink to='/product/newproduct'>
+                            <Inventory2OutlinedIcon/>
+                            Add Product
+                            </StyledLink>
+                        </ListItem>
+                    </List>
+                </SidebarMenu>
                 <SidebarMenu>
                     <Title>
                         Notification

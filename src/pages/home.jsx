@@ -37,7 +37,7 @@ export default function Home(){
             />
             <Widget>
                 <WidgetSm/>
-                <WidgetLg/>
+                <WidgetLg title="Latest Transactions" limit={10}/>
             </Widget>
         </Container>
     )
