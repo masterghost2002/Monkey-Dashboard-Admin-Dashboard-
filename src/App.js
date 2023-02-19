@@ -7,6 +7,7 @@ import User from "./pages/User";
 import NewUser from "./pages/NewUser";
 import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
+import NewProduct from "./pages/NewProduct";
 import Transactions from "./pages/Transactions";
 import DesktopModeWarning from "./components/warning/DesktopModeWarning";
 import styled from "styled-components";
@@ -41,6 +42,7 @@ function App() {
             <Route path="/user/newuser" element={<NewUser/>}/>
             <Route path="/user/:id" element={<User/>}/>
             <Route path="/products" element={<ProductList/>}/>
+            <Route path="/product/newproduct" element={<NewProduct/>}/>
             <Route path="/product/:id" element={<Product/>}/>
             <Route path="/transactions" element={<Transactions/>}/>
           </Routes>

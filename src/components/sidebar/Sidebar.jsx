@@ -136,7 +136,7 @@ export default function Sidebar() {
                         Notification
                     </Title>
                     <List>
-                        <ListItem>
+                        <ListItem disabled={true}>
                             <MailOutlineOutlinedIcon/>
                             Mail
                         </ListItem>

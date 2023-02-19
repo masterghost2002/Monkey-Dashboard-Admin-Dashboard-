@@ -54,7 +54,7 @@ export default function ProductList() {
                 )
             }
         },
-        { field: 'stock', headerName: 'Stock', flex: 2 },
+        { field: 'stock', headerName: 'Stock', flex: 1 },
         { field: 'status', headerName: 'Status', flex: 2 },
         {
             field: 'price', headerName: 'Price', flex: 2, renderCell: (params) => {
@@ -71,7 +71,7 @@ export default function ProductList() {
             }
         },
         {
-            field: 'action', headerName: 'Action', flex: 2, renderCell: (params) => {
+            field: 'action', headerName: 'Action', flex: 3, renderCell: (params) => {
                 return (
                     <>
                         <IconButton color='red' onClick={() => handleDelete(params.row.id)} >

@@ -55,7 +55,7 @@ export default function UserList() {
                 )
             }
         },
-        { field: 'email', headerName: 'Email', flex: 4 },
+        { field: 'email', headerName: 'Email', flex: 3 },
         { field: 'status', headerName: 'Status', flex: 2 },
         {
             field: 'transaction', headerName: 'Transaction', flex: 2, renderCell: (params) => {
@@ -72,7 +72,7 @@ export default function UserList() {
             }
         },
         {
-            field: 'action', headerName: 'Action', flex: 2, renderCell: (params) => {
+            field: 'action', headerName: 'Action', flex: 3, renderCell: (params) => {
                 return (
                     <>
                         <IconButton color='red' onClick={()=>handleDelete(params.row.id)} >

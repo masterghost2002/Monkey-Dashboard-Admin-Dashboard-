@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Button} from '../components/User/CardComponents';
-const Container = styled.div`
+import { motion } from "framer-motion";
+const Container = styled(motion.div)`
     flex:5;
     padding: 20px;
 `
@@ -9,15 +10,17 @@ const Title = styled.h2`
     margin: 0px;
 `
 const Form = styled.form`
+    // background-color:red;
     display:flex;
     flex-wrap:wrap; 
+    justify-content:space-between;
 `
 const InputGroup = styled.div`
     margin-top:20px;
     margin-right:20px;
     display:flex;
     flex-direction:column;
-    width:600px;
+    width:500px;
 `
 const Label = styled.label`
     font-size:20px;
@@ -45,7 +48,16 @@ const Select = styled.select`
 `
 export default function NewUser() {
     return (
-        <Container>
+        <Container
+        initial={{ x: 300, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: 300, opacity: 0 }}
+        transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+        }}
+    >
             <Title>Add User</Title>
             <Form>
                 <InputGroup>
@@ -85,10 +97,14 @@ export default function NewUser() {
                 </InputGroup>
                 <InputGroup>
                     <Label>Active</Label>
-                    <Select>
+                    <Select style={{width:'100px'}}>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </Select>
+                </InputGroup>
+                <InputGroup>
+                    <Label htmlFor="file" style={{cursor:'pointer'}}>Upload Profile Picture</Label>
+                    <Input type="file" style={{border:'none'}} id="file"></Input>
                 </InputGroup>
                 <Button type="submit" mt='20px' w='100px'  bg='#009fff' hbg='#007fff'>Submit</Button>
             </Form>
